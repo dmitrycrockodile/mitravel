@@ -1,0 +1,38 @@
+.feature-list {
+
+    &__article {
+        border-bottom: 1px solid #4d5a5f;
+        display: flex;
+        align-items: flex-start;
+        padding: 20px 0;
+    }
+
+    &__item:last-child .feature-list__article {
+        border-bottom: 1px solid transparent;
+    }
+
+    &__img {
+        height: 48px;
+        width: 48px;
+    }
+
+    &__img img {
+        height: 48px;
+        width: 48px;
+        border-radius: 50%;
+    }
+
+    &__time {
+        font-family: 'SFProText-Regular', sans-serif;
+        font-size: 11px;
+        color: rgba($color-white, 0.5);
+    }
+
+    &__text {
+        margin-left: 32px;
+
+        @include respond(mini-phone) {
+            padding-right: 10px;
+        }
+    }
+}

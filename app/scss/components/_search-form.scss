@@ -1,0 +1,55 @@
+.search-form {
+    flex-shrink: 0;
+    width: 68%;
+    position: relative;
+    height: 90px;
+
+    @include respond(phone) {
+        width: 55%;
+    }
+
+    @include respond(phone-small) {
+        width: 100%;
+    }
+
+    &__field {
+        border: none;
+        background-color: #fff;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        border-top-left-radius: 4px;
+        color: $color-dark;
+        padding-left: 50px;
+        padding-right: 85px;
+
+        @include respond(phone) {
+            padding-left: 30px;
+            padding-right: 60px;
+        }
+
+        @include respond(mini-phone) {
+            padding-left: 30px;
+            padding-right: 50px;
+        }
+    }
+
+    &__btn {
+        width: 18px;
+        height: 18px;
+        background-image: url("../images/search.svg");
+        @include image-set;
+        position: absolute;
+        top: 52%;
+        transform: translateY(-50%);
+        right: 50px;
+
+        @include respond(phone) {
+            right: 30px;
+        }
+
+        @include respond(mini-phone) {
+            right: 20px;
+        }
+    }
+}

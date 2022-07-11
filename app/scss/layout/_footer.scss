@@ -1,0 +1,115 @@
+.footer {
+	border-top: 1px solid #d9d9d9;
+	padding-top: 123px;
+
+    @include respond(mini-phone) {
+		padding: 30px 0;
+	}
+
+    &__title {
+        position: relative;
+        font-family: 'Helvetica', sans-serif;
+        font-weight: bold;
+        font-size: 12px;
+        letter-spacing: 2.15px;
+        text-transform: uppercase;
+        color: #100e0b;
+        padding-bottom: 35px;
+        margin-bottom: 35px;
+    }
+
+    &__title::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background: #57a773;
+        width: 48px;
+        height: 1px;
+    }
+
+    &__container {
+        justify-content: space-between;
+
+        @include respond(phone) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__column:last-child {
+
+        @include respond(phone) {
+            margin-top: 30px;
+        }
+
+        @include respond(phone-small) {
+            margin-top: 0;
+        }
+    }
+
+    &__link {
+        font-weight: 500;
+        font-size: 13px;
+        color: #959ea6;
+        display: inline-block;
+        margin-bottom: 12px;
+        transition: color .3s;
+    }
+
+    &__link:hover {
+        color: #666e75;
+        transition: color .3s;
+    }
+
+    &__bottom {
+        border-top: 1px solid #d9d9d9;
+        margin-top: 117px;
+        padding: 30px 0;
+
+        @include respond(phone-small) {
+            margin-top: 50px;
+        }
+
+        @include respond(mini-phone) {
+            padding-bottom: 0;
+        }
+    }
+
+    &__copy {
+        font-size: 13px;
+        color: #959EA6;
+
+        @include respond(phone) {
+            max-width: 50%;
+        }
+
+        @include respond(phone-small) {
+            max-width: none;
+		    width: 100%;
+        }
+    }
+
+    &__links {
+        display: flex;
+
+        @include respond(phone-small) {
+            margin-top: 30px;
+        }
+    }
+
+    &__links-item {
+        margin-left: 35px;
+
+        @include respond(phone-small) {
+            margin: 0 10px;
+        }
+    }
+
+    &__column {
+
+        @include respond(phone-small) {
+            width: 100%;
+		    margin-bottom: 30px;
+        }
+    }
+}

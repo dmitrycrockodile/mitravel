@@ -1,0 +1,82 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: 'SFProDisplay', sans-serif;
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+ul, ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.container {
+	max-width: 1300px;
+	padding: 0 40px;
+	margin: 0 auto;
+
+	@include respond(mini-phone) {
+		padding: 0 15px;
+	}
+}
+
+.site-container {
+	overflow: hidden;
+}
+
+.flex {
+	display: flex;
+}
+
+.btn-reset {
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	padding: 0;
+}
+
+.btn {
+	padding: 25px 60px;
+	font-size: 12px;
+	letter-spacing: 2.18182px;
+	text-transform: uppercase;
+	border-radius: 8px;
+	color: $color-white;
+}
+
+.grid {
+	display: grid;
+}
+
+.bottom-container {
+	justify-content: space-between;
+
+	@include respond(phone-small) {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}

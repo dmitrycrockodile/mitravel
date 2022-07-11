@@ -1,0 +1,166 @@
+.slider-container {
+	overflow-x: hidden;
+	padding: 100px 0;
+	width: 100%;
+	margin-top: 50px;
+
+	@include respond(phone-small) {
+        padding: 30px 0;
+    }
+
+	@include respond(mini-phone) {
+		margin-top: 0;
+	}
+}
+
+.slider-container .swiper-slide {
+	position: relative;
+	border-radius: 8px;
+	min-height: 550px;
+	width: 890px;
+	transition: transform 0.3s;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	overflow: hidden;
+
+	@include respond(tab-mini-land) {
+		width: 700px;
+		min-height: 500px;
+	}
+
+	@include respond(tab-port) {
+		width: 550px;
+		min-height: 400px;
+	}
+
+	@include respond(phone) {
+		min-height: 350px;
+	}
+
+	@include respond(phone-small) {
+		width: calc(100% - 60px);
+	}
+
+	@include respond(mini-phone) {
+		width: calc(100% - 30px);
+	}
+}
+
+.slider-container .swiper-slide::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 60%;
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 50%, rgba(0, 0, 0, 0.461617) 100%);
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.slider-container .swiper-slide-active {
+	transform: scaleX(1.16) scaleY(1.2);
+	transition: transform 0.3s;
+
+	@include respond(phone-small) {
+		transform: none;
+	}
+}
+
+.slider-container .swiper-slide-active::after {
+	opacity: 1;
+	transition: opacity 0.3s;
+}
+
+.swiper-slide video {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.swiper-slide__title {
+	font-weight: 700;
+	font-size: 28px;
+	color: $color-white;
+	position: relative;
+	z-index: 5;
+	padding-left: 35px;
+	padding-bottom: 30px;
+	transition: transform 0.3s;
+	transform: translateY(200px);
+
+	@include respond(phone-small) {
+		padding: 30px;
+		font-size: 25px;
+	}
+}
+
+.swiper-slide__btn {
+	position: absolute;
+	left: 48px;
+	top: 40px;
+	width: 90px;
+	height: 90px;
+	background-image: url("../images/vido-play.svg");
+	@include image-set;
+
+	@include respond(phone) {
+		left: 35px;
+		top: 35px;
+		width: 60px;
+		height: 60px;
+	}
+}
+
+.swiper-slide-active .swiper-slide__title {
+	transition: transform 0.3s;
+	transform: translateY(0);
+}
+
+.featured-videos {
+    padding-top: 100px;
+    padding-bottom: 50px;
+
+    &__descr {
+        text-align: center;
+        margin: 0 auto;
+        max-width: 634px;
+        padding-top: 24px;
+        font-family: 'SFCompact', sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        color: $color-slate;
+    }
+
+	@include respond(phone-small) {
+		padding-bottom: 25px;
+	}
+}
+
+.slide-1,
+.slide-2,
+.slide-3,
+.slide-4 {
+    @include image-set;
+}
+
+.slide-1 {
+    background-image: url("../images/vslider-1.jpg");
+}
+
+.slide-2 {
+    background-image: url("../images/vslider2.jpg");
+}
+
+.slide-3 {
+    background-image: url("../images/vslider3.jpg");
+}
+
+.slide-4 {
+    background-image: url("../images/vslider-1.jpg");
+}

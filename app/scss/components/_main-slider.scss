@@ -1,0 +1,70 @@
+.main-slider {
+    overflow: hidden;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    font-size: 0;
+
+    &__media img {
+        width: 100%;
+
+        @include respond(phone-small) {
+            width: 100%;
+        }
+    }
+
+    &__media {
+        max-height: 220px;
+    }
+
+    &__text {
+        height: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $color-neptune;
+        text-transform: uppercase;
+        color: $color-white;
+        font-size: 12px;
+        text-align: center;
+        letter-spacing: 2.18182px;
+
+        @include respond(phone) {
+            height: 78px;
+        }
+
+        @include respond(phone-small) {
+            position: relative;
+            z-index: 100;
+        }
+    }
+
+    &__play {
+        @include image-set;
+        position: absolute;
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%, -50%);
+        width: 32px;
+        height: 41px;
+        background-image: url("../images/main-slider/play-btn.svg");
+        cursor: pointer;
+        z-index: 50;
+
+        @include respond(tab-port) {
+            top: 33%;
+        }
+
+        @include respond(phone-small) {
+            height: 60px;
+            width: 47px;
+            left: 50%;
+            top: 42%;
+        }
+    }
+}
+
+@include respond(phone-small) {
+    .main-slider .swiper-container {
+        width: 100%;
+    }
+}

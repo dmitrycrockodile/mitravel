@@ -1,0 +1,18 @@
+.header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+
+    &__container {
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+
+        @include respond(mini-phone) {
+           padding: 30px;
+        }
+    }
+}
